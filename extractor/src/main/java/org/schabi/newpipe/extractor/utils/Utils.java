@@ -2,6 +2,7 @@ package org.schabi.newpipe.extractor.utils;
 
 import org.schabi.newpipe.extractor.exceptions.ParsingException;
 
+import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLDecoder;
