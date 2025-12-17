@@ -42,8 +42,17 @@ public final class Utils {
      * @param url The URL to be decoded.
      * @return The decoded URL.
      */
+    
+    //public static String decodeUrlUtf8(final String url) {
+    //    return URLDecoder.decode(url, StandardCharsets.UTF_8);
+    //}
     public static String decodeUrlUtf8(final String url) {
-        return URLDecoder.decode(url, StandardCharsets.UTF_8);
+        try {
+            // Android-safe 寫法
+            return URLDecoder.decode(url, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            return url;
+        }
     }
 
     /**
